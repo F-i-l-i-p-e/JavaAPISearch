@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.image.Image?>
+<!-- MainView.fxml file -->
+<VBox fx:controller="com.example.nasaimagesearch.controller.MainController"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20">
+
+    <!-- Title bar -->
+    <HBox alignment="CENTER">
+        <ImageView fitHeight="30" fitWidth="30">
+            <Image url="@/rocket.png" /> <!-- Replace with the actual path to your white image file -->
+        </ImageView>
+        <Label text="SPACE Image Search App" styleClass="title"/>
+    </HBox>
+
+    <!-- Search field -->
+    <TextField fx:id="searchField">
+        <promptText>Search here for discovering the universe</promptText>
+    </TextField>
+
+    <!-- Search button -->
+    <Button fx:id="searchButton" text="Search" onAction="#searchImages"/>
+
+    <!-- List view to display search results -->
+    <ListView fx:id="resultsListView"/>
+
+    <!-- Disclaimer label -->
+    <Label text="All images are fetched from NASA's API" styleClass="disclaimer"/>
+</VBox>
